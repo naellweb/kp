@@ -1,0 +1,1 @@
+import { price as r, ex as e } from "./product.js"; let pr = document.querySelectorAll("#price"); pr.innerHTML = r, pr.forEach(e => { e.addEventListener("open", () => { e.innerHTML = `${r} ر.س` }) });

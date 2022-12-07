@@ -1,0 +1,1126 @@
+@import url(https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&display=swap);
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+::before,
+::after {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: #5832ce;
+  color: #fff;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 950px;
+  }
+}
+
+header {
+  position: fixed;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  height: 55px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 999;
+}
+
+header .container {
+  height: 55px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 767px) {
+  header .container {
+    justify-content: flex-start;
+  }
+}
+
+header .container .hamp-menu {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 20px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+header .container .hamp-menu:hover {
+  background-color: #eee;
+  border-color: #ccc;
+}
+
+@media screen and (min-width: 767px) {
+  header .container .hamp-menu {
+    display: none;
+  }
+}
+
+header .logo a {
+  line-height: 0;
+}
+
+header .logo img {
+  width: 140px;
+  object-fit: cover;
+}
+
+header nav {
+  z-index: 9999999;
+}
+
+header nav .menu .head {
+  display: none;
+  margin: 0 0 16px 0;
+}
+
+header nav .menu li {
+  margin: 10px;
+}
+
+header nav .menu li a {
+  line-height: 0;
+  color: #383737;
+  font-size: 15px;
+}
+
+header nav .close {
+  position: absolute;
+  left: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transform: translateY(-5px);
+  display: none;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+  header nav .close {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header nav {
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #eee;
+    padding: 20px;
+    padding-left: 0;
+    transition: transform 0.5s;
+    transform: translateX(50vw);
+    -webkit-transform: translateX(50vw);
+    -moz-transform: translateX(50vw);
+    -ms-transform: translateX(50vw);
+    -o-transform: translateX(50vw);
+  }
+
+  header nav .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header nav .menu li {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  header nav .menu li:not(:first-child) {
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+  }
+
+  header nav .menu .head {
+    display: block;
+  }
+
+  header nav .menu hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+  header nav .menu .close {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header nav .menu hr {
+    position: fixed;
+    opacity: 0;
+  }
+}
+
+.all-sections {
+  padding-top: 25px;
+}
+
+.swapper {
+  position: relative;
+  max-height: 70vh;
+  direction: ltr;
+}
+
+@media screen and (max-width: 767px) {
+  .swapper .container {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-pagination span {
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  transform: scaleX(1.5);
+  transition: 0.5s ease;
+  -webkit-transform: scaleX(1.5);
+  -moz-transform: scaleX(1.5);
+  -ms-transform: scaleX(1.5);
+  -o-transform: scaleX(1.5);
+}
+
+.switcher {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.switcher .menu {
+  text-align: center;
+  height: 130px;
+  overflow-x: auto;
+}
+
+.switcher .menu li {
+  margin: 0 10px;
+  padding: 20px;
+  cursor: pointer;
+  color: #5f5f5f;
+  background-color: #f6f6f6;
+}
+
+.switcher .menu li:first-child {
+  margin-right: 0;
+}
+
+.switcher .menu li:last-child {
+  margin-left: 0;
+}
+
+.switcher svg {
+  width: 40px;
+  height: 40px;
+}
+
+.switcher h5 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  .switcher svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.carts {
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 767px) {
+  .carts .container {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+.carts .container .card {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.carts .card .image {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 30px;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.carts .card img {
+  position: absolute;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.carts .card h2 {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.carts .card .price {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* align-items: flex-start; */
+  font-size: 11px;
+  height: 49px;
+  display: block;
+  overflow-y: hidden;
+}
+
+.carts .card .price span {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  display: block;
+  color: #767676;
+  width: fit-content;
+  position: relative;
+}
+
+.carts .card .price span:nth-child(1)::after,
+.carts .card .price span:nth-child(2)::after {
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background-color: #f73538;
+  transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+}
+
+.carts .card .price span:nth-child(1)::before,
+.carts .card .price span:nth-child(2)::before {
+  content: "Span";
+  position: absolute;
+  left: -70px;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  padding: inherit;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.carts .card:nth-child(1) .price span:nth-child(1)::before {
+  content: "32 SAR";
+}
+
+.carts .card:nth-child(1) .price span:nth-child(2)::before {
+  content: "164 SAR";
+}
+
+.carts .card:nth-child(2) .price span:nth-child(1)::before {
+  content: "18 SAR";
+}
+
+.carts .card:nth-child(2) .price span:nth-child(2)::before {
+  content: "10 SAR";
+}
+
+.carts .card:nth-child(3) .price span:nth-child(1)::before {
+  content: "2 WEEK";
+}
+
+.carts .card:nth-child(3) .price span:nth-child(2)::before {
+  content: "10 SAR";
+}
+
+.carts .card:nth-child(4) .price span:nth-child(1)::before {
+  content: "90 SAR";
+}
+
+.carts .card:nth-child(4) .price span:nth-child(2)::before {
+  content: "240 SAR";
+}
+
+.carts .card:nth-child(6) .price span:nth-child(1)::before {
+  content: "18 SAR";
+}
+
+.carts .card:nth-child(6) .price span:nth-child(2)::before {
+  content: "72 SAR";
+}
+
+.carts .card:nth-child(7) .price span:nth-child(1)::before {
+  content: "52 SAR";
+}
+
+.carts .card:nth-child(7) .price span:nth-child(2)::before {
+  content: "100 SAR";
+}
+
+.carts .card:nth-child(9) .price span:nth-child(1)::before {
+  content: "52 SAR";
+}
+
+.carts .card:nth-child(9) .price span:nth-child(2)::before {
+  content: "122 SAR";
+}
+
+.carts .card:nth-child(10) .price span:nth-child(1)::before {
+  content: "15 SAR";
+}
+
+.carts .card:nth-child(10) .price span:nth-child(2)::before {
+  content: "42 SAR";
+}
+
+.carts .card:nth-child(12) .price span:nth-child(1)::before {
+  content: "16 SAR";
+}
+
+.carts .card:nth-child(12) .price span:nth-child(2)::before {
+  content: "36 SAR";
+}
+
+.carts .card:nth-child(14) .price span:nth-child(1)::before {
+  content: "17 SAR";
+}
+
+.carts .card:nth-child(14) .price span:nth-child(2)::before {
+  content: "LIKE PLUS";
+  left: -90px;
+}
+
+.carts .card:nth-child(15) .price span:nth-child(1)::before {
+  content: "70 SAR";
+}
+
+.carts .card:nth-child(16) .price span:nth-child(1)::before {
+  content: "13 SAR";
+}
+
+.carts .card:nth-child(16) .price span:nth-child(2)::before {
+  content: "34 SAR";
+}
+
+.carts .card:nth-child(17) .price span:nth-child(1)::before {
+  content: "9 SAR";
+}
+
+.carts .card:nth-child(17) .price span:nth-child(2)::before {
+  content: "13 SAR";
+}
+
+.carts .card:nth-child(18) .price span:nth-child(1)::before {
+  content: "13 SAR";
+}
+
+.carts .card:nth-child(18) .price span:nth-child(2)::before {
+  content: "17 SAR";
+}
+
+.carts .card:nth-child(19) .price span:nth-child(1)::before {
+  content: "5 SAR";
+}
+
+.carts .card:nth-child(19) .price span:nth-child(2)::before {
+  content: "9 SAR";
+}
+
+.carts .card:nth-child(20) .price span:nth-child(1)::before {
+  content: "13 SAR";
+}
+
+.carts .card:nth-child(20) .price span:nth-child(2)::before {
+  content: "39 SAR";
+}
+
+.carts .card:nth-child(22) .price span:nth-child(1)::before {
+  content: "17 SAR";
+}
+
+.carts .card:nth-child(22) .price span:nth-child(2)::before {
+  content: "LIKE PLUS";
+  left: -90px;
+}
+
+.carts .card:nth-child(24) .price span:nth-child(1)::before {
+  content: "GHIPS 1600";
+  left: -90px;
+}
+
+.carts .card:nth-child(24) .price span:nth-child(2)::before {
+  content: "GHIPS 10100";
+  left: -100px;
+}
+
+.carts .card:nth-child(25) .price span:nth-child(1)::before {
+  content: "17 usd";
+}
+
+.carts .card:nth-child(28) .price span:nth-child(1)::before {
+  content: "20 usd";
+}
+
+.carts .card:nth-child(28) .price span:nth-child(2)::before {
+  content: "9 usd";
+}
+
+.carts .card:nth-child(31) .price span:nth-child(1)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(31) .price span:nth-child(2)::before {
+  content: "175 sar";
+}
+
+.carts .card:nth-child(32) .price span:nth-child(1)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(32) .price span:nth-child(2)::before {
+  content: "175 sar";
+}
+
+.carts .card:nth-child(33) .price span:nth-child(1)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(33) .price span:nth-child(2)::before {
+  content: "175 sar";
+}
+
+.carts .card:nth-child(36) .price span:nth-child(1)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(36) .price span:nth-child(2)::before {
+  content: "175 sar";
+}
+
+.carts .card:nth-child(39) .price span:nth-child(1)::before {
+  content: "38 sar";
+}
+
+.carts .card:nth-child(39) .price span:nth-child(2)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(40) .price span:nth-child(1)::before {
+  content: "6 sar";
+}
+
+.carts .card:nth-child(40) .price span:nth-child(2)::before {
+  content: "14 sar";
+}
+
+.carts .card:nth-child(45) .price span:nth-child(1)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(45) .price span:nth-child(2)::before {
+  content: "175 sar";
+}
+
+.carts .card:nth-child(54) .price span:nth-child(1)::before {
+  content: "14 $";
+}
+
+.carts .card:nth-child(54) .price span:nth-child(2)::before {
+  content: "38 $";
+}
+
+.carts .card:nth-child(56) .price span:nth-child(1)::before {
+  content: "38 sar";
+}
+
+.carts .card:nth-child(56) .price span:nth-child(2)::before {
+  content: "75 sar";
+}
+
+.carts .card:nth-child(62) .price span:nth-child(1)::before {
+  content: "3 usd";
+}
+
+.carts .card:nth-child(62) .price span:nth-child(2)::before {
+  content: "13 usd";
+}
+
+.carts .card:nth-child(68) .price span:nth-child(1)::before {
+  content: "2 Month";
+}
+
+.carts .card:nth-child(68) .price span:nth-child(2)::before {
+  content: "5 Month";
+}
+
+.carts .card:nth-child(69) .price span:nth-child(1)::before {
+  content: "3 usd";
+}
+
+.carts .card:nth-child(5) .price span:nth-child(1)::after,
+.carts .card:nth-child(5) .price span:nth-child(2)::after,
+.carts .card:nth-child(8) .price span:nth-child(1)::after,
+.carts .card:nth-child(8) .price span:nth-child(2)::after,
+.carts .card:nth-child(11) .price span:nth-child(1)::after,
+.carts .card:nth-child(11) .price span:nth-child(2)::after,
+.carts .card:nth-child(13) .price span:nth-child(1)::after,
+.carts .card:nth-child(13) .price span:nth-child(2)::after,
+.carts .card:nth-child(21) .price span:nth-child(1)::after,
+.carts .card:nth-child(21) .price span:nth-child(2)::after,
+.carts .card:nth-child(22) .price span:nth-child(1)::after,
+.carts .card:nth-child(22) .price span:nth-child(2)::after,
+.carts .card:nth-child(23) .price span:nth-child(1)::after,
+.carts .card:nth-child(23) .price span:nth-child(2)::after,
+.carts .card:nth-child(26) .price span:nth-child(1)::after,
+.carts .card:nth-child(26) .price span:nth-child(2)::after,
+.carts .card:nth-child(27) .price span:nth-child(1)::after,
+.carts .card:nth-child(27) .price span:nth-child(2)::after,
+.carts .card:nth-child(29) .price span:nth-child(1)::after,
+.carts .card:nth-child(29) .price span:nth-child(2)::after,
+.carts .card:nth-child(30) .price span:nth-child(1)::after,
+.carts .card:nth-child(30) .price span:nth-child(2)::after,
+.carts .card:nth-child(34) .price span:nth-child(1)::after,
+.carts .card:nth-child(34) .price span:nth-child(2)::after,
+.carts .card:nth-child(35) .price span:nth-child(1)::after,
+.carts .card:nth-child(35) .price span:nth-child(2)::after,
+.carts .card:nth-child(37) .price span:nth-child(1)::after,
+.carts .card:nth-child(37) .price span:nth-child(2)::after,
+.carts .card:nth-child(38) .price span:nth-child(1)::after,
+.carts .card:nth-child(41) .price span:nth-child(1)::after,
+.carts .card:nth-child(42) .price span:nth-child(1)::after,
+.carts .card:nth-child(42) .price span:nth-child(2)::after,
+.carts .card:nth-child(43) .price span:nth-child(1)::after,
+.carts .card:nth-child(43) .price span:nth-child(2)::after,
+.carts .card:nth-child(44) .price span:nth-child(1)::after,
+.carts .card:nth-child(46) .price span:nth-child(1)::after,
+.carts .card:nth-child(46) .price span:nth-child(2)::after,
+.carts .card:nth-child(47) .price span:nth-child(1)::after,
+.carts .card:nth-child(47) .price span:nth-child(2)::after,
+.carts .card:nth-child(48) .price span:nth-child(1)::after,
+.carts .card:nth-child(48) .price span:nth-child(2)::after,
+.carts .card:nth-child(49) .price span:nth-child(1)::after,
+.carts .card:nth-child(49) .price span:nth-child(2)::after,
+.carts .card:nth-child(50) .price span:nth-child(1)::after,
+.carts .card:nth-child(50) .price span:nth-child(2)::after,
+.carts .card:nth-child(51) .price span:nth-child(1)::after,
+.carts .card:nth-child(52) .price span:nth-child(1)::after,
+.carts .card:nth-child(52) .price span:nth-child(2)::after,
+.carts .card:nth-child(53) .price span:nth-child(1)::after,
+.carts .card:nth-child(53) .price span:nth-child(2)::after,
+.carts .card:nth-child(55) .price span:nth-child(1)::after,
+.carts .card:nth-child(55) .price span:nth-child(2)::after,
+.carts .card:nth-child(56) .price span:nth-child(1)::after,
+.carts .card:nth-child(56) .price span:nth-child(2)::after,
+.carts .card:nth-child(57) .price span:nth-child(1)::after,
+.carts .card:nth-child(57) .price span:nth-child(2)::after,
+.carts .card:nth-child(58) .price span:nth-child(1)::after,
+.carts .card:nth-child(58) .price span:nth-child(2)::after,
+.carts .card:nth-child(59) .price span:nth-child(1)::after,
+.carts .card:nth-child(59) .price span:nth-child(2)::after,
+.carts .card:nth-child(60) .price span:nth-child(1)::after,
+.carts .card:nth-child(60) .price span:nth-child(2)::after,
+.carts .card:nth-child(61) .price span:nth-child(1)::after,
+.carts .card:nth-child(61) .price span:nth-child(2)::after,
+.carts .card:nth-child(63) .price span:nth-child(1)::after,
+.carts .card:nth-child(63) .price span:nth-child(2)::after,
+.carts .card:nth-child(64) .price span:nth-child(1)::after,
+.carts .card:nth-child(64) .price span:nth-child(2)::after,
+.carts .card:nth-child(61) .price span:nth-child(1)::after,
+.carts .card:nth-child(65) .price span:nth-child(1)::after,
+.carts .card:nth-child(65) .price span:nth-child(2)::after,
+.carts .card:nth-child(66) .price span:nth-child(1)::after,
+.carts .card:nth-child(66) .price span:nth-child(2)::after,
+.carts .card:nth-child(67) .price span:nth-child(1)::after,
+.carts .card:nth-child(67) .price span:nth-child(2)::after,
+.carts .card:nth-child(69) .price span:nth-child(1)::after,
+.carts .card:nth-child(69) .price span:nth-child(2)::after,
+.carts .card:nth-child(70) .price span:nth-child(1)::after,
+.carts .card:nth-child(70) .price span:nth-child(2)::after,
+.carts .card:nth-child(71) .price span:nth-child(1)::after,
+.carts .card:nth-child(71) .price span:nth-child(2)::after,
+.carts .card:nth-child(72) .price span:nth-child(1)::after,
+.carts .card:nth-child(72) .price span:nth-child(2)::after,
+.carts .card:nth-child(73) .price span:nth-child(1)::after,
+.carts .card:nth-child(73) .price span:nth-child(2)::after,
+.carts .card:nth-child(74) .price span:nth-child(1)::after,
+.carts .card:nth-child(74) .price span:nth-child(2)::after {
+  display: none;
+}
+
+.carts .card:nth-child(5) .price span:nth-child(1)::before,
+.carts .card:nth-child(5) .price span:nth-child(2)::before,
+.carts .card:nth-child(8) .price span:nth-child(1)::before,
+.carts .card:nth-child(8) .price span:nth-child(2)::before,
+.carts .card:nth-child(11) .price span:nth-child(1)::before,
+.carts .card:nth-child(11) .price span:nth-child(2)::before,
+.carts .card:nth-child(13) .price span:nth-child(1)::before,
+.carts .card:nth-child(13) .price span:nth-child(2)::before,
+.carts .card:nth-child(21) .price span:nth-child(1)::before,
+.carts .card:nth-child(21) .price span:nth-child(2)::before,
+.carts .card:nth-child(22) .price span:nth-child(1)::before,
+.carts .card:nth-child(22) .price span:nth-child(2)::before,
+.carts .card:nth-child(23) .price span:nth-child(1)::before,
+.carts .card:nth-child(23) .price span:nth-child(2)::before,
+.carts .card:nth-child(26) .price span:nth-child(1)::before,
+.carts .card:nth-child(26) .price span:nth-child(2)::before,
+.carts .card:nth-child(27) .price span:nth-child(1)::before,
+.carts .card:nth-child(27) .price span:nth-child(2)::before,
+.carts .card:nth-child(29) .price span:nth-child(1)::before,
+.carts .card:nth-child(29) .price span:nth-child(2)::before,
+.carts .card:nth-child(30) .price span:nth-child(1)::before,
+.carts .card:nth-child(30) .price span:nth-child(2)::before,
+.carts .card:nth-child(34) .price span:nth-child(1)::before,
+.carts .card:nth-child(34) .price span:nth-child(2)::before,
+.carts .card:nth-child(35) .price span:nth-child(1)::before,
+.carts .card:nth-child(35) .price span:nth-child(2)::before,
+.carts .card:nth-child(37) .price span:nth-child(1)::before,
+.carts .card:nth-child(37) .price span:nth-child(2)::before,
+.carts .card:nth-child(38) .price span:nth-child(1)::before,
+.carts .card:nth-child(41) .price span:nth-child(1)::before,
+.carts .card:nth-child(42) .price span:nth-child(1)::before,
+.carts .card:nth-child(42) .price span:nth-child(2)::before,
+.carts .card:nth-child(43) .price span:nth-child(1)::before,
+.carts .card:nth-child(43) .price span:nth-child(2)::before,
+.carts .card:nth-child(44) .price span:nth-child(1)::before,
+.carts .card:nth-child(46) .price span:nth-child(1)::before,
+.carts .card:nth-child(46) .price span:nth-child(2)::before,
+.carts .card:nth-child(47) .price span:nth-child(1)::before,
+.carts .card:nth-child(47) .price span:nth-child(2)::before,
+.carts .card:nth-child(48) .price span:nth-child(1)::before,
+.carts .card:nth-child(48) .price span:nth-child(2)::before,
+.carts .card:nth-child(49) .price span:nth-child(1)::before,
+.carts .card:nth-child(49) .price span:nth-child(2)::before,
+.carts .card:nth-child(50) .price span:nth-child(1)::before,
+.carts .card:nth-child(50) .price span:nth-child(2)::before,
+.carts .card:nth-child(51) .price span:nth-child(1)::before,
+.carts .card:nth-child(52) .price span:nth-child(1)::before,
+.carts .card:nth-child(52) .price span:nth-child(2)::before,
+.carts .card:nth-child(53) .price span:nth-child(1)::before,
+.carts .card:nth-child(53) .price span:nth-child(2)::before,
+.carts .card:nth-child(55) .price span:nth-child(1)::before,
+.carts .card:nth-child(55) .price span:nth-child(2)::before,
+.carts .card:nth-child(56) .price span:nth-child(1)::before,
+.carts .card:nth-child(56) .price span:nth-child(2)::before,
+.carts .card:nth-child(57) .price span:nth-child(1)::before,
+.carts .card:nth-child(57) .price span:nth-child(2)::before,
+.carts .card:nth-child(58) .price span:nth-child(1)::before,
+.carts .card:nth-child(58) .price span:nth-child(2)::before,
+.carts .card:nth-child(59) .price span:nth-child(1)::before,
+.carts .card:nth-child(59) .price span:nth-child(2)::before,
+.carts .card:nth-child(60) .price span:nth-child(1)::before,
+.carts .card:nth-child(60) .price span:nth-child(2)::before,
+.carts .card:nth-child(61) .price span:nth-child(1)::before,
+.carts .card:nth-child(61) .price span:nth-child(2)::before,
+.carts .card:nth-child(63) .price span:nth-child(1)::before,
+.carts .card:nth-child(63) .price span:nth-child(2)::before,
+.carts .card:nth-child(64) .price span:nth-child(1)::before,
+.carts .card:nth-child(64) .price span:nth-child(2)::before,
+.carts .card:nth-child(61) .price span:nth-child(1)::before,
+.carts .card:nth-child(65) .price span:nth-child(1)::before,
+.carts .card:nth-child(65) .price span:nth-child(2)::before,
+.carts .card:nth-child(66) .price span:nth-child(1)::before,
+.carts .card:nth-child(66) .price span:nth-child(2)::before,
+.carts .card:nth-child(67) .price span:nth-child(1)::before,
+.carts .card:nth-child(67) .price span:nth-child(2)::before,
+.carts .card:nth-child(69) .price span:nth-child(1)::before,
+.carts .card:nth-child(69) .price span:nth-child(2)::before,
+.carts .card:nth-child(70) .price span:nth-child(1)::before,
+.carts .card:nth-child(70) .price span:nth-child(2)::before,
+.carts .card:nth-child(71) .price span:nth-child(1)::before,
+.carts .card:nth-child(71) .price span:nth-child(2)::before,
+.carts .card:nth-child(72) .price span:nth-child(1)::before,
+.carts .card:nth-child(72) .price span:nth-child(2)::before,
+.carts .card:nth-child(73) .price span:nth-child(1)::before,
+.carts .card:nth-child(73) .price span:nth-child(2)::before,
+.carts .card:nth-child(74) .price span:nth-child(1)::before,
+.carts .card:nth-child(74) .price span:nth-child(2)::before {
+  display: none;
+}
+
+.colorTi {
+  color: #6824c4 !important;
+}
+
+.height {
+  height: auto !important;
+}
+
+.carts .show-more {
+  position: relative;
+  width: fit-content;
+  color: #6824c4;
+  padding-right: 17px;
+  transform: translateY(20px);
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  user-select: none;
+}
+
+.carts .show-more::after {
+  content: "\2b";
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+.carts .show-more.active::after {
+  content: "\-";
+  right: 0;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+}
+
+footer .first-section .call-us {
+  display: block;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .call-us .our-prand img {
+  width: 110px;
+  object-fit: contain;
+}
+
+footer .call-us .our-prand p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #383737;
+}
+
+footer .call-us .our-sochial p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #474747;
+}
+
+footer .call-us .our-sochial ul {
+  display: flex;
+  align-items: center;
+}
+
+footer .call-us .our-sochial ul li:not(:last-child) {
+  margin-left: 10px;
+}
+
+footer .call-us .our-sochial ul li a {
+  width: 15px;
+  height: 15px;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6824c4;
+  color: #fff;
+  font-size: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+footer .first-section .app p {
+  margin-bottom: 30px;
+  font-size: 17px;
+  color: #383737;
+  object-fit: cover;
+}
+
+footer .first-section .app .image img {
+  width: 170px;
+  margin-left: 18px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+footer .first-section .app .image img:nth-child(2) {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  footer .first-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .first-section .call-us {
+    margin-bottom: 20px;
+  }
+
+  footer .first-section .app img {
+    max-width: 120px;
+  }
+}
+
+footer .second-section .other-links a {
+  color: #474747;
+  margin-left: 20px;
+}
+
+footer .second-section p {
+  color: #474747;
+}
+
+footer .second-section .pay-card p {
+  margin-left: 10px;
+}
+
+footer .second-section .pay-card .imgs {
+  height: 30px;
+}
+
+footer .second-section .pay-card .imgs img {
+  width: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 991px) {
+  footer .second-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .second-section .other-links {
+    display: block;
+    flex-direction: column;
+    margin: 0 0 20px;
+  }
+
+  footer .second-section .other-links a {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  footer .second-section .pay-card {
+    display: block;
+  }
+
+  footer .second-section .pay-card p {
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer .second-section {
+    padding-bottom: 30px;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: #6824c4;
+  color: #fff;
+  left: 60px;
+  bottom: 60px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.whatsapp i {
+  font-size: 30px;
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+
+@media screen and (max-width: 767px) {
+  .whatsapp {
+    left: 30px;
+    bottom: 40px;
+  }
+
+  .whatsapp i {
+    font-size: 25px;
+  }
+}
+
+#offer {
+  position: absolute;
+  z-index: 2;
+  background-color: #ff4d4f;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 0 15px 1px;
+  line-height: 1.5;
+  top: 10px;
+  right: -7px;
+}
+
+#offer::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 0;
+  width: 8px;
+  height: 15px;
+  background-color: #ff4d4f;
+  z-index: -1;
+  transform: skewY(-50deg);
+  -webkit-transform: skewY(-50deg);
+  -moz-transform: skewY(-50deg);
+  -ms-transform: skewY(-50deg);
+  -o-transform: skewY(-50deg);
+}
